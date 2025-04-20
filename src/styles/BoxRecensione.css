@@ -1,0 +1,112 @@
+/* BoxRecensione.css */
+
+/* Stile principale per il contenitore della recensione */
+.box-recensione {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 600px;
+  }
+  
+  /* Stile per il titolo della recensione */
+  .box-recensione h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+  }
+  
+  /* Contenitore per l'immagine con rapporto 16:9 */
+  .box-recensione-immagine {
+    margin: 12px 0;
+    width: 100%;
+    position: relative;
+    padding-top: 56.25%; /* Rapporto 16:9 (9/16 = 0.5625 = 56.25%) */
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  
+  /* Stile per l'immagine mantenendo il rapporto 16:9 */
+  .box-recensione-immagine img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene le proporzioni riempiendo lo spazio */
+    object-position: center; /* Centra l'immagine */
+  }
+  
+  /* Stile per il testo della recensione */
+  .box-recensione p {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  
+  /* Contenitore per i bottoni di like/dislike */
+  .box-recensione-bottone {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+    justify-content: center;
+  }
+  
+  /* Stile base per i bottoni */
+  .box-recensione-bottone button {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+  }
+  
+  /* Effetto hover sui bottoni */
+  .box-recensione-bottone button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Stile per il bottone attivo (selezionato) */
+  .box-recensione-bottone button.active {
+    background-color: #e6f7ff;
+    border-color: #1890ff;
+    color: #1890ff;
+    font-weight: 500;
+  }
+  
+  /* Stile specifico per il bottone like quando attivo */
+  .box-recensione-bottone button.active:first-child {
+    background-color: #e6f7ff;
+  }
+  
+  /* Stile specifico per il bottone dislike quando attivo */
+  .box-recensione-bottone button.active:last-child {
+    background-color: #fff1f0;
+    border-color: #ff4d4f;
+    color: #ff4d4f;
+  }
+  
+  /* Effetto al click sui bottoni */
+  .box-recensione-bottone button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Responsive design per schermi piccoli */
+  @media (max-width: 480px) {
+    .box-recensione {
+      padding: 12px;
+    }
+    
+    .box-recensione-bottone {
+      justify-content: space-around;
+    }
+  }
